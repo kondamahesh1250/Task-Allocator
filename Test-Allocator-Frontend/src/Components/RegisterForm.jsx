@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function RegisterForm() {
   const [formData, setFormData] = useState({
@@ -85,8 +85,11 @@ function RegisterForm() {
         />
         <br />
         <button type="submit">Register</button>
-      </form>
+      </form><br />
+      <div style={{textAlign:"center"}}>
+      <span>Already Exists! <Link to="/login">click here</Link></span>
       {message && <p>{message}</p>}
+      </div>
     </div>
   );
 }

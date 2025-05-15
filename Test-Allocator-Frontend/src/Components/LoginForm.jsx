@@ -34,11 +34,6 @@ function LoginForm({ onLoginSuccess }) {
       return false;
     }
 
-    if (password.length < 6) {
-      setError('Password must be at least 6 characters');
-      return false;
-    }
-
     try {
       const { data } = await axios.post('http://localhost:5000/api/login', { email, password });
       localStorage.setItem('token', data.token);
