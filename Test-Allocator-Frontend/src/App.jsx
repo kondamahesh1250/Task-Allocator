@@ -18,7 +18,7 @@ function App() {
 
     if (!token) {
       console.error('No token found');
-      navigate("/login");
+      navigate("/");
       setUser([]);
       return;
     }
